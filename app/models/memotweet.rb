@@ -1,0 +1,2 @@
+class Memotweet < ApplicationRecord
+end
