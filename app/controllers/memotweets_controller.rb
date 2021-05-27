@@ -1,0 +1,2 @@
+class MemotweetsController < ApplicationController
+end
