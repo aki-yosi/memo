@@ -1,6 +1,10 @@
 class MemotweetsController < ApplicationController
-
+    
     def new
-        @memotweet = Memotweet.new
+        @memotweets = Memotweet.new
+    end
+
+    def index
+        @memotweets = Memotweet.all
     end
 end
