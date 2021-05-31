@@ -1,0 +1,20 @@
+<h2 class="items-sell-title">今回のメモを入力する</h2>
+<%= form_with model: @memotweet, local: true do |f| %>
+    <%= render 'shared/error_messages', model: f.object %>
+    <div class="new-text">
+        <div class="training_tile">
+            メモタイトル
+            <span class="indispensable">(必須)</span>
+        </div>
+        <%= f.text_area :training_title, class:"training-title", id:"item-name", placeholder:"メニュー（必須 40文字まで)", maxlength:"40" %>
+        <div class="training_text">
+            メモ内容
+            <span class="indispensable">(必須)</span>
+        </div>
+        <%= f.text_area :training_text, class:"training-text", id:"item-info", placeholder:"トレーニングの具体内容" ,rows:"7" ,maxlength:"1000" %>
+    </div>
+    <div class="sell-btn-contents">
+        <%= f.submit "投稿する" ,class:"sell-btn" %>
+        <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+<% end %>
